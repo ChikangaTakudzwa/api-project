@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "api"
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "project.wsgi.application"
 
+CSRF_TRUSTED_ORIGINS = ["https://*.github.dev"]
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
