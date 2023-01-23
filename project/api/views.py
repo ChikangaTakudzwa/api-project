@@ -9,7 +9,7 @@ from django.forms.models import model_to_dict
 
 
 # @csrf_exempt
-def books(request):
+def books(request, book_id):
     # if request if get, get all values of table objects and assign to books variable
     if request.method == "GET":
         books = Book.objects.all().values()
@@ -25,7 +25,7 @@ def books(request):
         price = request.POST.get('price')
 
         # assign the variable data from the request to the db table columns
-        book = Book(title=title, author=author, price=price)
+        book = Book(id=book_id, title=title, author=author, price=price)
         # try to save if integrity error is raise return jason response of missing firls error with 400 status
         try:
             book.save()

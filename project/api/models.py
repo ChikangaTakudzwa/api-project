@@ -10,7 +10,9 @@ class Book(models.Model):
     date = models.DateTimeField(default=datetime.datetime.now)
 
     class Meta:
-        indexes = models.Index(fields=['price']),
+        indexes = [
+            models.Index(fields=['price']),
+        ]
 
     def __str__(self):
         return self.title
