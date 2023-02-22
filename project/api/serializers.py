@@ -1,4 +1,4 @@
-from .models import Book
+from .models import Book, Category
 from rest_framework import serializers
 from decimal import Decimal
 
