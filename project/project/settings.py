@@ -77,9 +77,9 @@ TEMPLATES = [
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ChikangaTakudzwa/movie_app',
+        'NAME': 'ChikangaTakudzwa/bookAPI',
         'USER': 'ChikangaTakudzwa',
-        'PASSWORD': 'v2_3xJQv_zUncFgaz6udhsbrSWMt5MzQ',
+        'PASSWORD': 'v2_3zavj_YVcGGbqKwtU4ASzdHNhgiPJ',
         'HOST': 'db.bit.io',
         'PORT': '5432',
     }
