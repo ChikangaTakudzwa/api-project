@@ -15,7 +15,6 @@ class Book(models.Model):
     author = models.CharField(max_length=255)
     price = DecimalField(max_digits=5, decimal_places=2)
     date = models.DateTimeField(default=datetime.datetime.now)
-    category_id = models.ForeignKey(Category, on_delete=models.PROTECT)
 
     class Meta:
         indexes = [

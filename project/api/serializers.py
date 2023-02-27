@@ -1,11 +1,14 @@
 from .models import Book, Category
 from rest_framework import serializers
 from decimal import Decimal
+from django.utils.dateparse import parse_date
+
 
 class BookSerializer(serializers.ModelSerializer):
     muridzi = serializers.CharField(source='author')
     # code to link the price_after_tax method to the serializer
     after_tax = serializers.SerializerMethodField(method_name= 'price_after_tax')
+    date = serializers.DateTimeField(format='%Y-%m-%d')
     category = serializers.StringRelatedField()
     class Meta:
         model = Book
