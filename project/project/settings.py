@@ -76,12 +76,18 @@ TEMPLATES = [
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ChikangaTakudzwa/bookAPI',
-        'USER': 'ChikangaTakudzwa',
-        'PASSWORD': 'v2_3zavj_YVcGGbqKwtU4ASzdHNhgiPJ',
-        'HOST': 'db.bit.io',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'ChikangaTakudzwa/bookAPI',
+        # 'USER': 'ChikangaTakudzwa',
+        # 'PASSWORD': 'v2_3zavj_YVcGGbqKwtU4ASzdHNhgiPJ',
+        # 'HOST': 'db.bit.io',
+        # 'PORT': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'chikanga$default',
+        'USER': 'chikanga',
+        'PASSWORD': '6ZV2MBQqWdd7_C9',
+        'HOST': 'chikanga.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
     }
 }
 
