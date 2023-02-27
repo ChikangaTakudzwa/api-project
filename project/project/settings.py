@@ -69,17 +69,19 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "project.wsgi.application"
 
-CSRF_TRUSTED_ORIGINS = ["https://*.github.dev"]
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ChikangaTakudzwa/movie_app',
+        'USER': 'ChikangaTakudzwa',
+        'PASSWORD': 'v2_3xJQv_zUncFgaz6udhsbrSWMt5MzQ',
+        'HOST': 'db.bit.io',
+        'PORT': '5432',
     }
 }
 
