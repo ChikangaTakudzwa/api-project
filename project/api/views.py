@@ -13,6 +13,17 @@ class SingleBook(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
+
+
+
+
+
+
+
+
+
+
+
 # @csrf_exempt
 # def books(request, book_id):
 #     # if request if get, get all values of table objects and assign to books variable
