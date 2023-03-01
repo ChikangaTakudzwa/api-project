@@ -64,6 +64,8 @@ CORS_ALLOW_METHODS = [
     'GET',
     'POST',
     'OPTIONS',
+    'DELETE',
+    'PUT',
 ]
 
 TEMPLATES = [
