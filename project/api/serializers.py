@@ -9,10 +9,10 @@ class BookSerializer(serializers.ModelSerializer):
     # code to link the price_after_tax method to the serializer
     after_tax = serializers.SerializerMethodField(method_name= 'price_after_tax')
     date = serializers.DateTimeField(format='%Y-%m-%d')
-    category = serializers.StringRelatedField()
+    # category = serializers.StringRelatedField()
     class Meta:
         model = Book
-        fields = ['id', 'title', 'muridzi' , 'price', 'after_tax', 'date', 'category']
+        fields = ['id', 'title', 'muridzi' , 'price', 'after_tax', 'date']
 
     # method to calculate tax of and return total price with 10 % tax
     def price_after_tax(self, product:Book):

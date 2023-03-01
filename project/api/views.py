@@ -9,6 +9,12 @@ class BookView(generics.ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
+    # def perform_create(self, serializer_class):
+    #     serializer_class.save()
+
+    #     # You can also customize the response returned when a new object is created
+    #     return Response(serializer_class.data, status=status.HTTP_201_CREATED)
+
 class SingleBook(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
