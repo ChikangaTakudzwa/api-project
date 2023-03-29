@@ -2,9 +2,9 @@ from django.shortcuts import render
 from .models import Book, Category
 from .serializers import BookSerializer, CategorySerializer
 from rest_framework import generics
+from rest_framework.decorators import api_view
 
 # Create your views here.
-
 class BookView(generics.ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
