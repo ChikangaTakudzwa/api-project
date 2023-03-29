@@ -4,6 +4,11 @@ from decimal import Decimal
 from django.utils.dateparse import parse_date
 
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields =['id', 'slug', 'name']
+
 class BookSerializer(serializers.ModelSerializer):
     muridzi = serializers.CharField(source='author')
     # code to link the price_after_tax method to the serializer

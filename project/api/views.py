@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Book
-from .serializers import BookSerializer
+from .models import Book, Category
+from .serializers import BookSerializer, CategorySerializer
 from rest_framework import generics
 
 # Create your views here.
@@ -9,17 +9,17 @@ class BookView(generics.ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
-    # def perform_create(self, serializer_class):
-    #     serializer_class.save()
-
-    #     # You can also customize the response returned when a new object is created
-    #     return Response(serializer_class.data, status=status.HTTP_201_CREATED)
-
 class SingleBook(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
+class CategoryView(generics.ListCreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
+class SingleCategory(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
 
 

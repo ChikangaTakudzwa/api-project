@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure---$!p)!$t-x#_2bb64jm3js$n0bsirmjb_7tte0#l0^(#5-)f=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['chikanga.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['chikanga.pythonanywhere.com', 'localhost', '*']
 
 
 # Application definition
@@ -59,6 +59,8 @@ ROOT_URLCONF = "project.urls"
 # Allow all origins
 CORS_ORIGIN_ALLOW_ALL = True
 
+CSRF_TRUSTED_ORIGINS=['https://*.github.dev']
+
 # Allow only specific methods (e.g. GET, POST, OPTIONS)
 CORS_ALLOW_METHODS = [
     'GET',
@@ -91,18 +93,18 @@ TEMPLATES = [
 
 DATABASES = {
     "default": {
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'ChikangaTakudzwa/bookAPI',
-        # 'USER': 'ChikangaTakudzwa',
-        # 'PASSWORD': 'v2_3zavj_YVcGGbqKwtU4ASzdHNhgiPJ',
-        # 'HOST': 'db.bit.io',
-        # 'PORT': '5432',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'chikanga$default',
-        'USER': 'chikanga',
-        'PASSWORD': '6ZV2MBQqWdd7_C9',
-        'HOST': 'chikanga.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ChikangaTakudzwa/bookAPI',
+        'USER': 'ChikangaTakudzwa',
+        'PASSWORD': 'v2_3zavj_YVcGGbqKwtU4ASzdHNhgiPJ',
+        'HOST': 'db.bit.io',
+        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'chikanga$default',
+        # 'USER': 'chikanga',
+        # 'PASSWORD': '6ZV2MBQqWdd7_C9',
+        # 'HOST': 'chikanga.mysql.pythonanywhere-services.com',
+        # 'PORT': '3306',
     }
 }
 
