@@ -18,6 +18,10 @@ class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ['id', 'title', 'muridzi' , 'price', 'after_tax', 'date']
+        # extra_kwargs = {
+        #     'price': {'min_value': 2},
+        #     'after_tax':{'min_value':0}
+        # }
 
     # method to calculate tax of and return total price with 10 % tax
     def price_after_tax(self, product:Book):

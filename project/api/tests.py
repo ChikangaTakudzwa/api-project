@@ -1,3 +1,11 @@
-from django.test import TestCase
+from unittest import TestCase
+from django.urls import reverse
+from . import serializers
 
-# Create your tests here.
+class TestSerializer(TestCase):
+
+    def test_category(self):
+        """ Test category """
+        url = reverse("books")
+        resp = client.get(url)
+        assert resp.status_code == 200
